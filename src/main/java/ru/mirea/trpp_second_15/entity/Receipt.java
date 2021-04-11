@@ -1,4 +1,4 @@
-package ru.mirea.trpp_second_15.entity;
+package ru.mirea.trpp.entity;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.opencsv.bean.CsvBindByName;
@@ -17,6 +17,11 @@ public class Receipt {
     @JsonProperty("id")
     @CsvBindByName(column = "id")
     private Long id;
+    
+    public Long getId() {
+        return id;
+    }
+    
     /** email клиента. */
     @JsonProperty("client_email")
     @CsvBindByName(column = "client_email")
